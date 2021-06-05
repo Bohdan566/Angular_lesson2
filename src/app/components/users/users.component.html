@@ -1,0 +1,15 @@
+<h1>
+  {{chosen?.id}}
+  {{chosen?.name}}
+  {{chosen?.username}}
+  {{chosen?.email}}
+</h1>
+<div>
+  <app-user *ngFor="let user of users" [user]="user" (bubbleUser)="getUser($event)"></app-user>
+</div>
+<h2 *ngFor="let post of posts">
+  {{post?.id}}<br>
+  UserId : {{post?.userId}}
+  {{post?.title}}<br>
+  {{post?.body}}
+</h2>
